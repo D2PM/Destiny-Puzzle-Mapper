@@ -1,0 +1,190 @@
+@media screen and (max-width:600px){
+    :root{
+        --form-width:97%;
+    }
+    .search-container {
+        position:fixed;
+        right:4px;
+        top:1.5em;
+        color:white;
+        display: inline-block;
+    }
+    #searchInput {
+        box-sizing: border-box;
+        width: 200px;
+        padding: 6px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid white;
+        /*border-radius: 4px;*/
+        font-size: 16px;
+        color:white;
+        background-color:black;
+    }
+    #searchInput::placeholder{
+        color:white;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        color:white;
+        background-color: #111111;
+        min-width: 200px;
+        border: 1px solid #ddd;
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: #333333;
+    }
+    .show {
+        display: block;
+    }
+}
+@media screen and (min-width:601px){
+    :root{
+        --form-width:99%;
+    }
+    .search-container {
+        position:fixed;
+        right:4px;
+        top:1.5em;
+        color:white;
+        display: inline-block;
+    }
+    #searchInput {
+        box-sizing: border-box;
+        width: 700px;
+        padding: 6px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid white;
+        /*border-radius: 4px;*/
+        font-size: 18px;
+        color:white;
+        background-color:black;
+    }
+    #searchInput::placeholder{
+        color:white;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        color:white;
+        font-size:18px;
+        background-color: #111111;
+        min-width: 700px;
+        border: 1px solid #ddd;
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: #333333;
+    }
+    .show {
+        display: block;
+    }
+}
+:root {
+  --h2-font-size: 1.5em;          /* Default font size for h2 */
+  --h2-font-weight: bold;         /* Default font weight for h2 */
+  --h2-margin-top: 0.83em;        /* Default top margin for h2 */
+  --h2-margin-bottom: 0.83em;     /* Default bottom margin for h2 */
+  --h2-margin-left: 0;            /* Default left margin for h2 */
+  --h2-margin-right: 0;           /* Default right margin for h2 */
+  --h2-color: initial;            /* Default color for h2 (inherits from parent) */
+  --h2-display: block;            /* Default display for h2 */
+}
+[h2]{
+    font-size: 1.5em;          /* Default font size for h2 */
+    font-weight: bold;         /* Default font weight for h2 */
+    margin-top: 0.83em;        /* Default top margin for h2 */
+    margin-bottom: 0.83em;     /* Default bottom margin for h2 */
+    margin-left: 0;            /* Default left margin for h2 */
+    margin-right: 0;           /* Default right margin for h2 */
+    color: initial;            /* Default color for h2 (inherits from parent) */
+    display: block;
+}
+body{
+    color:white;
+    background-color:black;
+    font-family:arial;
+}
+#forms{
+    border-collapse:collapse;
+}
+#forms tr{
+    border:1px solid white;
+}
+#forms a{
+    color:white;
+    text-decoration:none;
+    padding:4px;
+    font-size:18px;
+}
+#forms tr:hover{
+    background-color:gray;
+}
+#title{
+    font-size:40px;
+    margin-bottom:0px;
+}
+#title[name]{
+    margin-bottom:initial;
+}
+#type{
+    border-collapse:collapse;
+}
+#type tr{
+    border:1px solid white;
+}
+#type tr:hover{
+    background-color:gray;
+}
+#pageheader{
+    margin-top:0px;
+    font-size:25px;
+}
+#pageheader2{
+    margin-top:0px;
+    font-size:23px;
+}
+#type a{
+    margin:4px;
+    font-size:var(--h2-font-size);
+    font-weight:bold;
+    display:block;
+    color:white;
+    text-decoration:none;
+}
+#logo{
+    content:url("./DPM_Logo.png");
+    width:35px;
+    padding-left:5px;
+    border-radius:10px;
+    /*border:1px solid white;*/
+}
+.header{
+    margin:4px;
+    font-weight:bold;
+    font-size:18px;
+}
+#form{
+    border:1px solid white;
+    position:fixed;
+    bottom:1em;
+    background-color:#212121;
+    left:3px;
+    padding:3px;
+    width:var(--form-width);
+}
