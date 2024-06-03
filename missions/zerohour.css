@@ -1,0 +1,66 @@
+@media screen and (max-width:600px){
+    #ZHPI{
+        width:300px;
+        margin-left:5px;
+    }
+}
+@media screen and (min-width:601px){
+    #ZHPI{
+        width:500px;
+        position:absolute;
+        left:15%;
+        top:20%;
+        
+    }
+}
+[name='arcnorm']{
+    content:url("https://destiny-puzzle-mapper-10258304.codehs.me/maps/missions/zerohour/Zero_Hour_Plates_Normal_Arc_Map.png");
+}
+[name='solarnorm']{
+    content:url("https://destiny-puzzle-mapper-10258304.codehs.me/maps/missions/zerohour/Zero_Hour_Plates_Normal_Solar_Map.png");
+}
+[name='voidnorm']{
+    content:url("https://destiny-puzzle-mapper-10258304.codehs.me/maps/missions/zerohour/Zero_Hour_Plates_Normal_Void_Map.png");
+}
+
+[name='arclgnd']{
+    content:url("https://destiny-puzzle-mapper-10258304.codehs.me/maps/missions/zerohour/Zero_Hour_Plates_Legend_Arc_Map.png");
+}
+[name='solarlgnd']{
+    content:url("https://destiny-puzzle-mapper-10258304.codehs.me/maps/missions/zerohour/Zero_Hour_Plates_Legend_Solar_Map.png");
+}
+[name='voidlgnd']{
+    content:url("https://destiny-puzzle-mapper-10258304.codehs.me/maps/missions/zerohour/Zero_Hour_Plates_Legend_Void_Map.png");
+}
+[map]{
+	border:1px solid white;
+	color:white;
+	cursor:default;
+	background-color:black
+}
+[map].active{
+	background-color:red;
+	color:white;
+}
+[map2]{
+    cursor:default;
+	color:white;
+	border:1px solid white;
+	background-color:black;
+	display:block;
+}
+#threats{
+	border-collapse:collapse
+}
+#arc-btn{
+	color:cyan;
+}
+#solar-btn{
+	color:orange
+}
+#void-btn{
+	color:magenta
+}
+[map2].active{
+    background-color:white;
+}
