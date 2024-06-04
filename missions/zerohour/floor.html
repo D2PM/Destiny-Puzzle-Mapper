@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>DPM - Zero Hour - Floor</title>
+    <link rel="shortcut icon" href="https://destiny-puzzle-mapper-10258304.codehs.me/assets/images/DPM_Logo_Favicon.png">
+    <link href="https://destiny-puzzle-mapper-10258304.codehs.me//style.css" rel="stylesheet">
+    <link href="../zerohour.css" rel="stylesheet">
+</head>
+<body>
+    <h1 id="title"><span onclick="back()" id="logo"></span> DPM</h1>
+    <h1 id="pageheader">Missions: Zero Hour: Floor</h1>
+    <div id="version">
+        <button map class="version-btn" id="legend-btn" onclick="lgnd()">Legend</button>
+        <button map class="version-btn active" id="norm-btn" onclick="norm()">Normal</button>
+    </div>
+		<br>
+    <table id="threat">
+        <tr>
+				<td map2 class="threat-btn" id="arc-btn" onclick="arc()">Arc</td>
+				</tr>
+        <tr>
+				<td map2 class="threat-btn" id="solar-btn" onclick="solar()">Solar</td>
+				</tr>
+        <tr>
+				<td map2 class="threat-btn active" id="void-btn" onclick="Void()">Void</td>
+				</tr>
+    </table>
+    <br>
+    <div name="voidnorm" id="ZHPI"></div>
+    <script src="https://destiny-puzzle-mapper-10258304.codehs.me/script.js"></script>
+    <script>
+        let isarc = false
+        let issolar = false
+        let isvoid = true
+        let normal = true
+        let legend = false
+        function norm(){
+            legend = false
+            normal = true
+			let tablinks = document.getElementsByClassName("version-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+	        document.getElementById("norm-btn").className += " active"
+	        check()
+	    }
+        function lgnd(){
+            legend = true
+            normal = false
+			let tablinks = document.getElementsByClassName("version-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+	        document.getElementById("legend-btn").className += " active"
+            check()
+        }
+        function Void(){
+            isarc = false
+            issolar = false
+            isvoid = true
+            let tablinks = document.getElementsByClassName("threat-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+	        document.getElementById("void-btn").className += " active"
+            check()
+        }
+        function solar(){
+            isarc = false
+            issolar = true
+            isvoid = false
+		    let tablinks = document.getElementsByClassName("threat-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+	        document.getElementById("solar-btn").className += " active"
+            check()
+        }
+        function arc(){
+            isarc = true
+            issolar = false
+            isvoid = false
+			let tablinks = document.getElementsByClassName("threat-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+	        document.getElementById("arc-btn").className += " active"
+            check()
+        }
+        function check(){
+            if (normal == true){
+                if (isarc == true){
+                    document.getElementById("ZHPI").setAttribute("name","arcnorm")
+                } else if (issolar == true){
+                    document.getElementById("ZHPI").setAttribute("name","solarnorm")
+                } else if (isvoid == true){
+                    document.getElementById("ZHPI").setAttribute("name","voidnorm")
+                }
+            } else if (legend == true){
+                if (isarc == true){
+                    document.getElementById("ZHPI").setAttribute("name","arclgnd")
+                } else if (issolar == true){
+                    document.getElementById("ZHPI").setAttribute("name","solarlgnd")
+                } else if (isvoid == true){
+                    document.getElementById("ZHPI").setAttribute("name","voidlgnd")
+                }
+            }
+        }
+        check()
+    </script>
+</body>
+</html>
